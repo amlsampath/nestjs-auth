@@ -10,9 +10,9 @@ export class DataController {
         const headerData = this.request.headers;
 
         const token = headerData['authorization'];
-        // const bearerToken = token.split(' ')[1];
+         const bearerToken = token.split(' ')[1];
 
-        if (token !== 'YOUR_BEARER_TOKEN') {
+        if (bearerToken !== 'YOUR_BEARER_TOKEN') {
             throw new UnauthorizedException('Invalid token');
         }
 
